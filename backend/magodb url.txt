@@ -1,0 +1,1 @@
+mongodb+srv://TaskApp:simple123@cluster0.m7bxn.mongodb.net/task-manager-api?retryWrites=true

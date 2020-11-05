@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A easy to use and manage Daily Task Manager."
+    />
+    <meta
+      name="author"
+      content="Kushagra Gangwar, Jatin Thakwani, Shubham Sharma"
+    />
+    <title>Things.Do | Manage your daily tasks easily</title>
+    <meta name="generator" content="Jekyll v4.0.1" />
+    <link rel="icon" href="./images/tasks.png" />
+    <link
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <h1 class="masthead-brand">Things.Do</h1>
+      <div class="user-image">
+        <button class="drpdown">
+          <img src="./avtar.jpg" alt="User Image" />
+        </button>
+        <button id="logout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+        </button>
+      </div>
+    </header>
+    <div class="main-container">
+      <form action="#" class="subject">
+        <fieldset>
+          <legend>ADD NEW TASK</legend>
+          <div class="main-content">
+            <div class="left-content">
+              <div class="text-adder">
+                <h3 class="add-subject">
+                  <i class="fa fa-pencil"></i> Task Description
+                </h3>
+                <input
+                  type="text"
+                  name="task-description"
+                  class="task-description"
+                  id="task-description"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="task-state">
+            <h3 class="state-heading">
+              <i class="fa fa-tasks"></i> Task State:
+            </h3>
+            <label for="taskState"></label>
+            <p class="state-para">
+              <input
+                type="radio"
+                name="taskState"
+                id="taskState1"
+                checked
+                value="notCompleted"
+              />
+              <span class="task-notcompleted">Not Completed</span>
+              <input
+                type="radio"
+                name="taskState"
+                id="taskState2"
+                value="inProgress"
+              />
+              <span class="task-inprogress">In Progress</span>
+              <input
+                type="radio"
+                name="taskState"
+                id="taskState3"
+                value="completed"
+              />
+              <span class="task-completed">Completed</span>
+            </p>
+          </div>
+          <div class="sub-content">
+            <h3 class="date-time">
+              <i class="fa fa-calendar" aria-hidden="true"></i> Set Reminder
+              Date and Time
+            </h3>
+            <div class="date-time-container">
+              <div class="set-date">
+                <input
+                  type="date"
+                  name="reminder-date"
+                  id="reminder-date"
+                  required
+                />
+              </div>
+              <div class="set-time">
+                <input
+                  type="time"
+                  name="reminder-time"
+                  id="reminder-time"
+                  value="08:00"
+                />
+              </div>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Add Task" class="submitBtn" />
+              <input type="reset" value="Reset" />
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="info">
+      Due Date : 12-08-2020 <br />
+      Topic : Study about Machine Learning <br />
+      Status : To-Do
+    </div>
+
+    <section id="status-section">
+      <div class="status" id="todo">
+        <h3>
+          To-Do <span class="light"> | </span><span id="todo-count"> </span>
+        </h3>
+        <div class="container" id="todo-list">
+          <!-- <div
+            class="draggable todo-list-items"
+            id="todo-item-1"
+            draggable="true"
+          >
+            Study about Machine Learning
+          </div> -->
+        </div>
+      </div>
+      <div class="status" id="progress">
+        <h3>
+          In progress <span class="light"> | </span
+          ><span id="progress-count"> </span>
+        </h3>
+        <div class="container" id="progress-list">
+          <!-- <div
+            class="draggable progress-list-items"
+            id="progress-item-1"
+            draggable="true"
+          >
+            Boil eggs and make tea
+          </div> -->
+        </div>
+      </div>
+      <div class="status" id="done">
+        <h3>
+          Done <span class="light"> | </span><span id="done-count"> </span>
+        </h3>
+        <div class="container" id="done-list">
+          <!-- <div
+            class="draggable done-list-items"
+            id="done-item-1"
+            draggable="true"
+          >
+            DBMS homework
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
